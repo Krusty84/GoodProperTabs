@@ -11,6 +11,12 @@ It demonstrates a classic approach to placing tabs in an application window.
 
 **How to use:**
 
+1.Add this repo (https://github.com/Krusty84/GoodProperTabs.git) as Package at your project, in Xcode Menu: File->Add Package Dependencies...
+
+![image](https://github.com/user-attachments/assets/7ef2ecfe-ed8e-40ca-8859-bf10ac29d041)
+
+2.Add Package at you code
+
 ```
 import SwiftUI
 import GoodProperTabs
