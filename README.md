@@ -17,13 +17,13 @@ import GoodProperTabs
 struct ContentView: View {
     var body: some View {
         GoodProperTabsView(content: [
-                    //OOTB icon from SF, system:sf_icon_name
-                    (title: "Tab 1", icon: "system:apple.logo", view: AnyView(CustomTabContent())),
-                    //CUSTOM icon from Assets.xcassets
-                    (title: "Tab 2", icon: "iconFromAssets.xcassets", view: AnyView(Text("Tab #01"))),
-                    //OOTB icon from SF, system:sf_icon_name
-                    (title: "Tab 3", icon: "system:apple.logo", view: AnyView(Text("Tab #22")))
-                ])
+        //OOTB icon from SF, system:sf_icon_name
+        (title: "Tab 1", icon: "system:apple.logo", view: AnyView(CustomTabContent())),
+        //CUSTOM icon from Assets.xcassets
+        (title: "Tab 2", icon: "iconFromAssets.xcassets", view: AnyView(Text("Tab #01"))),
+        //OOTB icon from SF, system:sf_icon_name
+        (title: "Tab 3", icon: "system:apple.logo", view: AnyView(Text("Tab #22")))
+        ])
     }
 }
 
