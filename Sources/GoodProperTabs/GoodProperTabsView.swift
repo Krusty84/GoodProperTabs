@@ -43,7 +43,11 @@ public struct GoodProperTabsView: View {
 
                 .frame(height: 80)
                 .padding(.horizontal, 0)
-                .foregroundColor(self.selection == index ? Color("SettingsV4") : Color("SettingsV5"))
+                .foregroundColor(
+                    self.selection == index
+                    ? Color(red: 0.0, green: 0.4, blue: 0.92)
+                    : Color(red: 0.42, green: 0.43, blue: 0.43)
+                )
                 .onHover(perform: { hovering in
                     if hovering {
                         indexHovered = index
@@ -58,7 +62,8 @@ public struct GoodProperTabsView: View {
             Spacer()
         }
         .padding(0)
-        .background(Color("SettingsV1"))
+        //.background(Color("SettingsV1"))
+        .background(Color(red: 240.0/255.0, green: 243.0/255.0, blue: 244.0/255.0))
     }
 
     public var body: some View {
