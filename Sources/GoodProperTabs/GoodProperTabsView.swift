@@ -23,7 +23,6 @@ public struct GoodProperTabsView: View {
         HStack(spacing: 0) {
             ForEach(0..<titles.count, id: \.self) { index in
                 VStack {
-                    //Sedoykin Alexey changed it
                     if icons[index].hasPrefix("system:") {
                         Image(systemName: String(icons[index].dropFirst(7)))
                             .font(.largeTitle)
@@ -39,8 +38,7 @@ public struct GoodProperTabsView: View {
                 .padding(15)
                 .background(Color.gray.opacity(((self.selection == index) || (self.indexHovered == index)) ? 0.3 : 0),
                             in: RoundedRectangle(cornerRadius: 8, style: .continuous))
-
-                .frame(height: 80)
+                .frame(maxWidth: .infinity, maxHeight: 80)
                 .padding(.horizontal, 0)
                 .foregroundColor(
                     self.selection == index
@@ -60,20 +58,17 @@ public struct GoodProperTabsView: View {
             }
         }
         .padding(0)
-        //.background(Color("SettingsV1"))
         .background(Color(red: 240.0/255.0, green: 243.0/255.0, blue: 244.0/255.0))
     }
 
     public var body: some View {
         VStack(spacing: 0) {
             tabBar
-
             tabViews[selection]
                 .padding(0)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding(0)
-        //.frame(width: 600, height: 400) // Set window size
         .onAppear {
             // Bring the app to the front
             NSApp.activate(ignoringOtherApps: true)
