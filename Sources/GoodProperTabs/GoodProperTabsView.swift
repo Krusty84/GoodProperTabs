@@ -20,8 +20,7 @@ public struct GoodProperTabsView: View {
     }
     
     public var tabBar: some View {
-        HStack {
-            Spacer()
+        HStack(spacing: 0) {
             ForEach(0..<titles.count, id: \.self) { index in
                 VStack {
                     //Sedoykin Alexey changed it
@@ -59,7 +58,6 @@ public struct GoodProperTabsView: View {
                     self.selection = index
                 }
             }
-            Spacer()
         }
         .padding(0)
         //.background(Color("SettingsV1"))
@@ -75,7 +73,7 @@ public struct GoodProperTabsView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding(0)
-        .frame(width: 600, height: 400) // Set window size
+        //.frame(width: 600, height: 400) // Set window size
         .onAppear {
             // Bring the app to the front
             NSApp.activate(ignoringOtherApps: true)
